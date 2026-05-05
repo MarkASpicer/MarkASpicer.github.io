@@ -1,5 +1,109 @@
-<html>
-  <body>
-    <h1>Hello World</h1>
-  </body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mark A Spicer | PhD Researcher</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --navy: #0d1b2a; --slate: #1b2d3e; --gold: #c9a84c;
+      --cream: #f5f0e8; --muted: #8a9bb0; --white: #ffffff;
+    }
+    body {
+      background: var(--navy); color: var(--cream);
+      font-family: 'DM Sans', sans-serif; font-weight: 300;
+      min-height: 100vh; display: flex; align-items: center; justify-content: center;
+      padding: 2rem;
+    }
+    .card {
+      max-width: 680px; width: 100%;
+      border: 1px solid rgba(201,168,76,0.2);
+      padding: 3.5rem;
+      position: relative;
+      animation: fadeUp 0.9s ease forwards;
+    }
+    .card::before {
+      content: ''; position: absolute; top: 0; left: 0;
+      width: 3px; height: 100%; background: var(--gold);
+    }
+    .top { display: flex; align-items: center; gap: 2rem; margin-bottom: 2rem; }
+    .photo {
+      width: 90px; height: 90px; border-radius: 50%;
+      border: 2px solid rgba(201,168,76,0.4);
+      object-fit: cover; flex-shrink: 0;
+      background: var(--slate); display: flex; align-items: center;
+      justify-content: center; font-size: 2rem; overflow: hidden;
+    }
+    .photo img { width: 100%; height: 100%; object-fit: cover; }
+    .eyebrow {
+      font-size: 0.68rem; letter-spacing: 0.25em; text-transform: uppercase;
+      color: var(--gold); margin-bottom: 0.5rem;
+    }
+    h1 {
+      font-family: 'Playfair Display', serif; font-size: 2rem;
+      font-weight: 900; color: var(--white); line-height: 1.1;
+    }
+    .divider { width: 40px; height: 2px; background: var(--gold); margin: 1.5rem 0; }
+    .bio { font-size: 0.95rem; color: rgba(245,240,232,0.75); line-height: 1.8; }
+    .tags { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1.8rem; }
+    .tag {
+      border: 1px solid rgba(201,168,76,0.25); color: rgba(201,168,76,0.85);
+      font-size: 0.68rem; letter-spacing: 0.08em; text-transform: uppercase;
+      padding: 0.3rem 0.75rem;
+    }
+    .footer { margin-top: 2.5rem; display: flex; align-items: center; gap: 1.5rem; }
+    .linkedin {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      text-decoration: none; color: var(--gold);
+      font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase;
+      border: 1px solid rgba(201,168,76,0.35); padding: 0.5rem 1.2rem;
+      transition: background 0.25s, color 0.25s;
+    }
+    .linkedin:hover { background: var(--gold); color: var(--navy); }
+    .linkedin svg { width: 14px; height: 14px; fill: currentColor; }
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(16px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    @media (max-width: 520px) {
+      .card { padding: 2rem; }
+      .top { flex-direction: column; align-items: flex-start; }
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="top">
+      <div class="photo">
+        <!-- Replace profile.jpg with your own photo uploaded to the repo -->
+        <img src="profile.jpg" alt="Mark A Spicer" onerror="this.style.display='none'; this.parentElement.innerText='👤'"/>
+      </div>
+      <div>
+        <p class="eyebrow">University of Kent · PhD Researcher</p>
+        <h1>Mark A Spicer</h1>
+      </div>
+    </div>
+    <div class="divider"></div>
+    <p class="bio">
+      I am a PhD researcher at the University of Kent investigating why people fall for phishing emails. My systematic literature review — applying the PRISMA methodology across 4,402 screened articles — examines the psychological, demographic, behavioural, and environmental factors that drive susceptibility, and evaluates the effectiveness of organisational controls in reducing risk. My work calls for large-scale, real-world research to close the gaps left by studies conducted predominantly in educational settings. Alongside my research, I work as a Data Protection Officer, bringing a practical lens to questions of human behaviour and information security.
+    </p>
+    <div class="tags">
+      <span class="tag">Phishing Susceptibility</span>
+      <span class="tag">Cyber Psychology</span>
+      <span class="tag">Systematic Review</span>
+      <span class="tag">Data Protection</span>
+      <span class="tag">PRISMA</span>
+    </div>
+    <div class="footer">
+      <a class="linkedin" href="https://www.linkedin.com/in/mark-spicer-0a45276/" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+        </svg>
+        LinkedIn
+      </a>
+    </div>
+  </div>
+</body>
 </html>
